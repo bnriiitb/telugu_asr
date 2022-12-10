@@ -1,7 +1,6 @@
 datasets>=2.6.1
-transformers==4.18.0
+git+https://github.com/huggingface/transformers
 librosa
 evaluate>=0.30
 jiwer
 gradio
-tqdm
