@@ -8,6 +8,18 @@
 #SBATCH --ntasks-per-node=1          # Maximum number of tasks on each node (Restricted to 20 tasks per user a/c)
 #SBATCH --output=mpi_test_%j.log     # Path to the standard output and error files relative to the working directory
 
+# The normal method to kill a Slurm job is:
+#     $ scancel <jobid>
+
+# You can find your jobid with the following command:
+#     $ squeue -u $USER
+
+# If the the job id is 1234567 then to kill the job:
+#     $ scancel 1234567
+
+
+# sbatch script.sh --ntasks=20 --cpus-per-task=16 --nodes=5 --ntasks-per-node=20
+
 source /raid/cs20mds14030/miniconda3/etc/profile.d/conda.sh
 # cd telugu_asr
 # conda create --name telugu_asr python=3.8 --yes
