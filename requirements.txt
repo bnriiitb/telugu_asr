@@ -9,3 +9,4 @@ ipython==8.7.0
 tensorboard==2.11.0
 tensorboardX==2.5.1
 gradio
+python-dotenv==0.21.0
