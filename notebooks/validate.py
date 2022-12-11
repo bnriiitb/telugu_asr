@@ -9,11 +9,14 @@ from datasets import load_dataset
 from transformers import WhisperForConditionalGeneration, WhisperProcessor
 import soundfile as sf
 import torch
-from evaluate import load
 import time
 from tqdm import tqdm
 from transformers import pipeline
 import whisper
+import evaluate
+
+
+metric = evaluate.load("wer")
 
 
 print("##### Loading the dataset #####")
@@ -39,6 +42,10 @@ for item in tqdm(fleurs_dataset['audio']):
 print("###### Transcribing Text using finetunred Model completed")
 print(finetuned_texts)
 
+print("##### Computing WER on finetuned model started #####")
+finetuned_wer = 100 * metric.compute(predictions=finetuned_texts, references=fleurs_dataset['text'])
+print("##### Computing WER on finetuned model completed #####")
+print(f'Finetuned Model WER --> {finetuned_wer}')
 
 whisper_langs = []
 whisper_texts = []
@@ -52,8 +59,7 @@ print(whisper_texts)
 
 
 print("##### Compute WER started #####")
-metric = evaluate.load("wer")
 finetuned_wer = 100 * metric.compute(predictions=finetuned_texts, references=fleurs_dataset['text'])
 whisper_wer = 100 * metric.compute(predictions=whisper_texts, references=fleurs_dataset['text'])
 print("##### Compute WER Comlpeted #####")
-print("whisper_wer --> {whisper_wer}, finetuned_wer --> {}")
+print(f"whisper_wer --> {whisper_wer}, finetuned_wer --> {finetuned_wer}")

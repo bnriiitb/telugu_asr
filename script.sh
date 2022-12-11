@@ -18,7 +18,7 @@
 #     $ scancel 1234567
 
 
-# sbatch script.sh --ntasks=20 --cpus-per-task=16 --nodes=5 --ntasks-per-node=20
+# sbatch script.sh --ntasks=20 --cpus-per-task=16 --nodes=20 --ntasks-per-node=20
 
 source /raid/cs20mds14030/miniconda3/etc/profile.d/conda.sh
 # cd telugu_asr
