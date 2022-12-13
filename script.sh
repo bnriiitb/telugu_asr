@@ -21,15 +21,14 @@
 # sbatch script.sh --ntasks=20 --cpus-per-task=16 --nodes=20 --ntasks-per-node=20
 
 source /raid/cs20mds14030/miniconda3/etc/profile.d/conda.sh
-# cd telugu_asr
 # conda create --name telugu_asr python=3.8 --yes
 conda activate telugu_asr
 # conda install pytorch torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia --yes
-# cd telugu_asr
 # pip3 install -r requirements.txt
 cd notebooks
-# python train.py
-python validate.py
+python train.py
+# python vakyansh_wer.py
+# python validate.py
 echo "Date              = $(date)"
 echo "Hostname          = $(hostname -s)"
 echo "Working Directory = $(pwd)"
