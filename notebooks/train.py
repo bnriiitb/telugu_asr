@@ -62,7 +62,8 @@ def get_dataset_from_csv(file_name):
     ds = ds.rename_column("transcription", "text")
     return ds['train']
 
-csv_files = ["noisy_test_unknown","noisy_test_known","clean_test_known","clean_test_unknown","clean_valid","te_in_female","te_in_male"]
+csv_files = ["clean_test_unknown","clean_valid"]
+# csv_files = ["noisy_test_unknown","noisy_test_known","clean_test_known","clean_test_unknown","clean_valid","te_in_female","te_in_male"]
 ds = get_dataset_from_json("Telangana_Sahitya_Akademi_16-08-2021_14-40/")
 print(ds)
 for fn in csv_files:
@@ -102,7 +103,7 @@ def prepare_dataset(batch):
     return batch
 
 print("####### Preparing dataset started ########")
-train_test_dataset = train_test_dataset.map(prepare_dataset, remove_columns=train_test_dataset.column_names["train"], num_proc=20)
+train_test_dataset = train_test_dataset.map(prepare_dataset, remove_columns=train_test_dataset.column_names["train"], num_proc=16)
 print("####### Preparing dataset completed ########")
 
 
@@ -111,7 +112,7 @@ import torch
 from dataclasses import dataclass
 from typing import Any, Dict, List, Union
 
-torch.cuda.empty_cache()
+torch.cuda.set_device('cuda:15')
 
 @dataclass
 class DataCollatorSpeechSeq2SeqWithPadding:
@@ -178,20 +179,20 @@ print("####### Define the Training Configuration #########")
 from transformers import Seq2SeqTrainingArguments
 
 training_args = Seq2SeqTrainingArguments(
-    output_dir="./whisper-small-te-14k",  # change to a repo name of your choice
-    per_device_train_batch_size=8,
-    gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
+    output_dir="./whisper-small-te-4k",  # change to a repo name of your choice
+    per_device_train_batch_size=1,
+    gradient_accumulation_steps=16,  # increase by 2x for every 2x decrease in batch size
     learning_rate=1e-5,
     warmup_steps=500,
-    max_steps=15000,
+    max_steps=10000,
     gradient_checkpointing=True,
     fp16=True,
     evaluation_strategy="steps",
-    per_device_eval_batch_size=8,
+    per_device_eval_batch_size=1,
     predict_with_generate=True,
     generation_max_length=225,
-    save_steps=1000,
-    eval_steps=1000,
+    save_steps=500,
+    eval_steps=500,
     logging_steps=25,
     report_to=["tensorboard"],
     load_best_model_at_end=True,
