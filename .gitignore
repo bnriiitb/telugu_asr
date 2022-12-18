@@ -136,3 +136,4 @@ notebooks/training_data
 *.DS_Store
 *.ipynb_checkpoints
 *transcription_n2w.txt
+*line_index.tsv
