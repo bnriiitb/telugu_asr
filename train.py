@@ -14,19 +14,24 @@ login("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")
 
 # all PATHs related constants
 BASE_PATH = "/raid/cs20mds14030/telugu_asr/data"
+
 INDIC_SUPREB_DATASETS = ["indic_superb/clean_train","indic_superb/clean_valid",
                          "indic_superb/clean_test_known","indic_superb/clean_test_unknown"]
 
 OPENSLR_DATASETS = ["open_slr/te_in_female","open_slr/te_in_male"]
 
-ULCA_DATASETS = ["ulca/BBC_News_Telugu_17-08-2021_00-57",
-                 "ulca/Chai_Bisket_Stories_16-08-2021_14-17",
+ULCA_DATASETS = ["ulca/Chai_Bisket_Stories_16-08-2021_14-17",
                  "ulca/Telangana_Sahitya_Akademi_16-08-2021_14-40"]
+
+# ULCA_DATASETS = ["ulca/BBC_News_Telugu_17-08-2021_00-57",
+#                  "ulca/Chai_Bisket_Stories_16-08-2021_14-17",
+#                  "ulca/Telangana_Sahitya_Akademi_16-08-2021_14-40"]
+
 
 MUCS_DATASETS = ["mucs/te-in-Test/Audios","mucs/te-in-Train/Audios"]
 
 # Load the dataset from metadata.csv files
-DATASETS = INDIC_SUPREB_DATASETS+OPENSLR_DATASETS+ULCA_DATASETS+MUCS_DATASETS
+DATASETS = INDIC_SUPREB_DATASETS+ULCA_DATASETS+OPENSLR_DATASETS
 
 def create_dataset_from_metadata(dataset_name):
     ds = load_dataset('csv', data_files=f"{BASE_PATH}/{dataset_name}/metadata.csv")
@@ -45,10 +50,9 @@ def load_datasets_from_metadata(DATASETS):
     return ds
 
 print(f'Avaialble datasets --> {DATASETS}')
-print('##### Loading the datasets #####')
-# ds = load_datasets_from_metadata(DATASETS)
 
-ds = create_dataset_from_metadata(ULCA_DATASETS[2])
+print('##### Loading the datasets #####')
+ds = load_datasets_from_metadata(DATASETS)
 print('##### Successfully loaded the datasets #####')
 
 # normalize the sampling rate to 16k Hz
@@ -167,19 +171,19 @@ from transformers import Seq2SeqTrainingArguments
 
 training_args = Seq2SeqTrainingArguments(
     output_dir=model_output_dir,  # change to a repo name of your choice
-    per_device_train_batch_size=8,
-    gradient_accumulation_steps=2,  # increase by 2x for every 2x decrease in batch size
+    per_device_train_batch_size=4,
+    gradient_accumulation_steps=4,  # increase by 2x for every 2x decrease in batch size
     learning_rate=1e-5,
-    warmup_steps=1000,
+    warmup_steps=3000,
     max_steps=10000,
     gradient_checkpointing=True,
     fp16=True,
     evaluation_strategy="steps",
-    per_device_eval_batch_size=8,
+    per_device_eval_batch_size=4,
     predict_with_generate=True,
     generation_max_length=225,
-    save_steps=2000,
-    eval_steps=2000,
+    save_steps=5000,
+    eval_steps=5000,
     logging_steps=25,
     report_to=["tensorboard"],
     load_best_model_at_end=True,
