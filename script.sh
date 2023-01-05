@@ -18,8 +18,8 @@
 #     $ scancel 1234567
 
 
-# sbatch script.sh --ntasks=20 --cpus-per-task=16 --nodes=20 --ntasks-per-node=20
-
+# sbatch script.sh --gres=gpu:1 --cpus-per-task=64 --ntasks=64 --cpus-per-task=64 --nodes=64 --ntasks-per-node=20
+export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:128
 source /raid/cs20mds14030/miniconda3/etc/profile.d/conda.sh
 # conda create --name telugu_asr python=3.8 --yes
 conda activate telugu_asr
