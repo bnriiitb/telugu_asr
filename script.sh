@@ -25,7 +25,7 @@ source /raid/cs20mds14030/miniconda3/etc/profile.d/conda.sh
 conda activate telugu_asr
 # conda install pytorch torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia --yes
 # pip3 install -r requirements.txt
-cd notebooks
+# cd notebooks
 python train.py
 # python vakyansh_wer.py
 # python validate.py

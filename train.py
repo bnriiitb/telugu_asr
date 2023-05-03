@@ -10,7 +10,8 @@ from datasets import load_dataset,concatenate_datasets, Audio
 from huggingface_hub import login
 login("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")
 
-# export CUDA_VISIBLE_DEVICES=15
+# nvidia-smi  check the available GPUs
+# export CUDA_VISIBLE_DEVICES=15 use the appropriate GPU
 
 # all PATHs related constants
 BASE_PATH = "/raid/cs20mds14030/telugu_asr/data"
@@ -175,7 +176,7 @@ training_args = Seq2SeqTrainingArguments(
     gradient_accumulation_steps=4,  # increase by 2x for every 2x decrease in batch size
     learning_rate=1e-5,
     warmup_steps=3000,
-    max_steps=10000,
+    max_steps=30000,
     gradient_checkpointing=True,
     fp16=True,
     evaluation_strategy="steps",
