@@ -9,10 +9,12 @@ from datasets import load_dataset,concatenate_datasets, Audio
 
 from huggingface_hub import login
 login("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")
-
+# screen 
 # nvidia-smi  check the available GPUs
 # export CUDA_VISIBLE_DEVICES=15 use the appropriate GPU
 # python train.py |& tee console.log
+# screen -ls
+# screen -r $screen_running
 
 # all PATHs related constants
 BASE_PATH = "/raid/cs20mds14030/telugu_asr/data"
