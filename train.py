@@ -12,6 +12,7 @@ login("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")
 
 # nvidia-smi  check the available GPUs
 # export CUDA_VISIBLE_DEVICES=15 use the appropriate GPU
+# python train.py |& tee console.log
 
 # all PATHs related constants
 BASE_PATH = "/raid/cs20mds14030/telugu_asr/data"
@@ -175,7 +176,7 @@ training_args = Seq2SeqTrainingArguments(
     per_device_train_batch_size=4,
     gradient_accumulation_steps=4,  # increase by 2x for every 2x decrease in batch size
     learning_rate=1e-5,
-    warmup_steps=3000,
+    warmup_steps=1000,
     max_steps=30000,
     gradient_checkpointing=True,
     fp16=True,
