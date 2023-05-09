@@ -1,0 +1,100 @@
+file_name,length (in sec),speaker_gender,no_of_speakers,code_mixed,code_mixed_languages,dialect,background noise/music,theme
+vad_00_OY9xCzgKIJg,17.55,female,1,no,na,telangana,no,weather
+broken-vad_02_YvnbpgyNEG0-5,14.33,male,1,no,na,nuetral,no,weather
+broken-vad_02_YvnbpgyNEG0-4,20,male,1,no,na,nuetral,no,weather
+broken-vad_02_YvnbpgyNEG0-2,20,female,1,yes,telugu+english,costal andhra,no,weather
+vad_00_JHFcHueFxBw,8.22,female,1,yes,telugu+english,neutral,yes,weather
+vad_01_JHFcHueFxBw.wav,60.46,female,1,yes,telugu+english,neutral,yes,weather
+broken-vad_01_E8KRQoNpp8Y-0,20,female,1,yes,telugu+english,neutral,no,finance
+broken-vad_06_g1vCoK8wf-U-0,20,male,1,yes,telugu+english,neutral,no,finance
+broken-vad_06_g1vCoK8wf-U-1,16.9,male,2,yes,telugu+english,neutral,no,finance
+broken-vad_06_xpMl4UJUzC0-0,20,male,1,yes,telugu+english,neutral,yes,finance
+broken-vad_09_g1vCoK8wf-U-1,15.13,male,2,yes,telugu+english,neutral,no,finance
+broken-vad_19_q_u-4osc610-1,20,male,1,yes,telugu+english,neutral,yes,finance
+vad_00_KpH6El_W0AI,8.7,male,2,yes,telugu+english,neutral,no,finance
+vad_00_q_u-4osc610,10.92,male,1,yes,telugu+english,neutral,yes,finance
+vad_02_xpMl4UJUzC0,14.67,male,1,yes,telugu+english,neutral,yes,finance
+vad_03_xpMl4UJUzC0,7.95,male,1,yes,telugu+english,neutral,yes,finance
+vad_06_E8KRQoNpp8Y,25.95,female,1,yes,telugu+english,neutral,no,finance
+vad_11_q_u-4osc610,19.59,male,1,yes,telugu+english,neutral,yes,finance
+vad_15_q_u-4osc610,16.38,male,1,yes,telugu+english,neutral,yes,finance
+vad_08_q_u-4osc610,13.68,male,1,yes,telugu+english,neutral,yes,finance
+broken-vad_01__5BntK9iyo4-2,11.12,male,1,yes,na,neutral,yes,healthcare
+broken-vad_03__5BntK9iyo4-0,20,male,1,yes,na,neutral,yes,healthcare
+broken-vad_04__5BntK9iyo4-0,20,male,1,yes,telugu+english,neutral,yes,healthcare
+broken-vad_04__5BntK9iyo4-3,16.77,male,1,yes,telugu+english,neutral,yes,healthcare
+broken-vad_09__5BntK9iyo4-0,20,male,1,yes,telugu+english,neutral,yes,healthcare
+broken-vad_10_1D2HGDhR4OE-1,20,male+female,2,yes,telugu+english,neutral,no,healthcare
+broken-vad_13_vkJs4WLK2WU-0,20,male+female,2,yes,telugu+english,neutral,no,healthcare
+broken-vad_13_vkJs4WLK2WU-1,20,male+female,2,yes,telugu+english,neutral,no,healthcare
+broken-vad_14__5BntK9iyo4-0,20,male,1,yes,telugu+english,neutral,yes,healthcare
+broken-vad_15__5BntK9iyo4-0,20,male,1,yes,telugu+english,neutral,yes,healthcare
+broken-vad_18_4NOLJrZMHOE-0,20,male,1,yes,telugu+english,neutral,no,healthcare
+broken-vad_20__5BntK9iyo4-7,20,male+female,2,yes,telugu+english,neutral,yes,healthcare
+broken-vad_48_vkJs4WLK2WU-0,20,male+female,2,yes,telugu+english,neutral,yes,healthcare
+vad_01_1XKs15LyN7c,11.43,female,1,yes,telugu+english,neutral,yes,healthcare
+broken-vad_02_eWANW0LMQWw-4,20,female,1,yes,telugu+english,neutral,yes,reality show
+broken-vad_02_eWANW0LMQWw-7,20,male+female,2,no,na,neutral,yes,reality show
+broken-vad_02_eWANW0LMQWw-8,20,male+female,2,no,na,neutral,yes,reality show
+broken-vad_02_eWANW0LMQWw-10,20,male+female,3,yes,telugu+english,neutral,yes,reality show
+broken-vad_02_eWANW0LMQWw-14,20,male,2,yes,telugu+english,neutral,yes,reality show
+broken-vad_13_gcDJWr_Y8cU-40,20,male+female,2,yes,telugu+english,neutral,yes,reality show
+broken-vad_13_gcDJWr_Y8cU-21,20,female,1,yes,telugu+english,neutral,yes,reality show
+broken-vad_04_eWANW0LMQWw-52,20,male+female,2,yes,telugu+english,neutral,yes,reality show
+broken-vad_04_eWANW0LMQWw-33,20,male+female,2,yes,telugu+english,neutral,yes,reality show
+broken-vad_04_bDiT5kKKnjY-0,20,male,1,yes,telugu+english,neutral,no,automotive
+broken-vad_04_Qr81X7ADSC4-1,20,male,1,yes,telugu+english,neutral,no,automotive
+broken-vad_07_bDiT5kKKnjY-0,20,male,1,yes,telugu+english,neutral,yes,automotive
+broken-vad_08_bDiT5kKKnjY-0,20,male,1,yes,telugu+english,neutral,no,automotive
+broken-vad_10_Yk7PuNPW7F4-0,20,male,1,yes,telugu+english,neutral,yes,automotive
+broken-vad_19_Yk7PuNPW7F4-1,20,male,1,yes,telugu+english,neutral,yes,automotive
+broken-vad_19_Yk7PuNPW7F4-0,20,male,1,yes,telugu+english,neutral,yes,automotive
+broken-vad_74_Yk7PuNPW7F4-0,20,male,1,yes,telugu+english,neutral,yes,automotive
+vad_12_bDiT5kKKnjY,14.25,male,1,yes,telugu+english,neutral,no,automotive
+vad_66_Yk7PuNPW7F4,20,male,1,yes,telugu+english,neutral,yes,automotive
+vad_109_bDiT5kKKnjY,11.22,male,1,yes,telugu+english,neutral,no,automotive
+vad_115_bDiT5kKKnjY,12.09,male,1,yes,telugu+english,neutral,no,automotive
+vad_24_bDiT5kKKnjY,25.56,male,1,yes,telugu+english,neutral,no,automotive
+vad_15_Qr81X7ADSC4,25.47,male,1,yes,telugu+english,neutral,no,automotive
+broken-vad_104_bDiT5kKKnjY-1,9.04,male,1,no,na,neutral,yes,automotive
+broken-vad_19_Yk7PuNPW7F4-2,12.05,male,1,yes,telugu+english,neutral,yes,automotive
+broken-vad_02_WSrcQ5d4eGs-0,20,male,2,yes,telugu+english,srikakulam,no,general
+broken-vad_10_WSrcQ5d4eGs-1,20,male+female,2,yes,telugu+english,srikakulam,yes,general
+vad_09_WSrcQ5d4eGs,10.71,male+female,2,yes,telugu+english,srikakulam,yes,general
+broken-vad_11_NeOnmz8ziuk-0,20,male,2,yes,telugu+english,nelluru,no,general
+vad_02_L9XotmWDVC4,5.37,male+female,2,yes,telugu+english,srikakulam,no,general
+vad_04_L9XotmWDVC4,7.8,male+female,2,no,telugu,srikakulam,yes,general
+vad_05_NeOnmz8ziuk,2.61,male,1,yes,telugu+english,nelluru,no,general
+vad_08_L9XotmWDVC4,11.49,male+female,2,yes,telugu,srikakulam,yes,general
+broken-vad_11_tm2J-qlbHBY-1,7.99,male,1,yes,telugu+english,kadapa,yes,general
+broken-vad_26_kEnzBCowpjg-0,20,male+female,2,yes,telugu+english,godavari,yes,general
+broken-vad_34_kEnzBCowpjg-1,14.11,male,1,yes,telugu+english,godavari,yes,general
+vad_00_kEnzBCowpjg,17.13,male,1,yes,telugu+english,godavari,yes,general
+vad_06_kEnzBCowpjg.wav,5.04,male,1,yes,telugu+english,godavari,yes,general
+vad_12_kEnzBCowpjg,2.91,male,1,yes,telugu+english,godavari,no,general
+vad_21_tm2J-qlbHBY,10.2,male,2,no,telugu,kadapa,yes,general
+vad_32_R4kPm3KHUcw,17.04,male+female,2,yes,telugu+english,chitoor,no,general
+vad_38_tm2J-qlbHBY,3.96,male,1,no,telugu,chitoor,no,general
+vad_52_R4kPm3KHUcw,1.95,male,1,no,telugu,chitoor,no,general
+vad_12_R4kPm3KHUcw,8.97,male,1,no,telugu,kadapa,no,general
+vad_35_R4kPm3KHUcw,3.03,male,1,no,telugu,kadapa,no,general
+broken-vad_93_0OR5H_QiQD8-0,20,male+female,2,no,telugu,telangana,yes,general
+broken-vad_93_0OR5H_QiQD8-2,10.52,male,1,no,telugu,telangana,yes,general
+vad_03_0OR5H_QiQD8,5.19,male+female,2,no,telugu,telangana,yes,general
+vad_06_0OR5H_QiQD8,12.3,female,1,no,telugu,telangana,yes,general
+vad_35_0OR5H_QiQD8,7.56,male,1,no,telugu,telangana,no,general
+vad_57_0OR5H_QiQD8,5.58,male,1,no,telugu,telangana,no,general
+vad_69_0OR5H_QiQD8,3.75,male,1,no,telugu,telangana,no,general
+vad_102_0OR5H_QiQD8,2.88,male,1,no,telugu,telangana,no,general
+vad_76_0OR5H_QiQD8,6.42,male,1,no,telugu,telangana,no,general
+vad_04_0OR5H_QiQD8,5.13,female,1,no,telugu,telangana,no,general
+vad_46_ChbBFnO-XRU,7.77,male+female,2,yes,telugu+english,muslim telugu,no,general
+vad_71_ChbBFnO-XRU,1.56,male,1,yes,telugu+english,neutral,yes,general
+vad_22_ChbBFnO-XRU,12.21,male+female,2,yes,telugu+english,muslim telugu,yes,general
+vad_06_ChbBFnO-XRU,19.05,male,1,yes,telugu+english,neutral,yes,general
+vad_38_ChbBFnO-XRU,6.24,female,1,yes,telugu+english,muslim telugu,yes,general
+broken-vad_03_62WGmeWoYQ0-1,10.9,male,1,yes,telugu+english,nelluru,yes,general
+broken-vad_08_62WGmeWoYQ0-6,20,male,2,yes,telugu+english,nelluru,yes,general
+broken-vad_00_lshQKEpvm6c-7,19.81,male,2,yes,telugu+english,mahabub nagar,yes,general
+broken-vad_05_lshQKEpvm6c-8,13.22,male,2,yes,telugu+english,kadapa,yes,general
+broken-vad_05_lshQKEpvm6c-0,20,male,1,yes,telugu+english,mahabub nagar,yes,general

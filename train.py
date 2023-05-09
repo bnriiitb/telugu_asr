@@ -15,6 +15,8 @@ login("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")
 # python train.py |& tee console.log
 # screen -ls
 # screen -r $screen_running
+# du -sh .
+# rm -rf .cache/
 
 # all PATHs related constants
 BASE_PATH = "/raid/cs20mds14030/telugu_asr/data"
@@ -35,7 +37,7 @@ ULCA_DATASETS = ["ulca/Chai_Bisket_Stories_16-08-2021_14-17",
 MUCS_DATASETS = ["mucs/te-in-Test/Audios","mucs/te-in-Train/Audios"]
 
 # Load the dataset from metadata.csv files
-DATASETS = INDIC_SUPREB_DATASETS+ULCA_DATASETS+OPENSLR_DATASETS
+DATASETS = INDIC_SUPREB_DATASETS+ULCA_DATASETS+OPENSLR_DATASETS+MUCS_DATASETS
 
 def create_dataset_from_metadata(dataset_name):
     ds = load_dataset('csv', data_files=f"{BASE_PATH}/{dataset_name}/metadata.csv")
@@ -175,15 +177,15 @@ from transformers import Seq2SeqTrainingArguments
 
 training_args = Seq2SeqTrainingArguments(
     output_dir=model_output_dir,  # change to a repo name of your choice
-    per_device_train_batch_size=4,
-    gradient_accumulation_steps=4,  # increase by 2x for every 2x decrease in batch size
+    per_device_train_batch_size=8,
+    gradient_accumulation_steps=2,  # increase by 2x for every 2x decrease in batch size
     learning_rate=1e-5,
     warmup_steps=1000,
     max_steps=30000,
     gradient_checkpointing=True,
     fp16=True,
     evaluation_strategy="steps",
-    per_device_eval_batch_size=4,
+    per_device_eval_batch_size=8,
     predict_with_generate=True,
     generation_max_length=225,
     save_steps=5000,
